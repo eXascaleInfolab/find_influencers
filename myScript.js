@@ -1,8 +1,6 @@
 var sec1 = document.getElementById("sec1");
 sec1.style.display = "none"
-var timer_count=document.getElementById('timer_count');	
 var appear=0
-var text_chat
 var submission=0
 var submission_0=0
 var submission_1=0
@@ -10,10 +8,11 @@ var submission_2=0
 
 
 var button = $('#btn')
+var button_2 = $('#btn_2')
+var button_sub=$('#btn_sub')
 var counter_exp = 0
 var counter_conn = 0
 var counter_mot = 0
-
 $("#amount_expertise").slider();
 $("#amount_expertise").on("slide", function(slideEvt) {
 	$("#amount_expertise_SliderVal").text(slideEvt.value);
@@ -35,10 +34,12 @@ $("#amount_motivation").on("slide", function(slideEvt) {
 
 
 
+
+
 $(function() {
 	var button_twitter = $('#btn_twitter')
 	var btn_valid1 = $('#btn_valid1')
-	//var btn_valid2 = $('#btn_valid2')
+	var btn_sub=$('#btn_sub')
 	button_twitter.on("click", function(e) {
 
 		var twitter_own = $('#twitter_own').val()
@@ -87,8 +88,7 @@ $(function() {
 		}
 	})
 
-	$(document).ready(function(){
-
+	$(document).ready(function(){	
 		var timer = setInterval(clock, 1000);
 		var msec = 00;
 		var sec = 00;
@@ -107,7 +107,7 @@ $(function() {
 			$('#timer').val(min.toString()+":"+sec.toString()+":"+msec.toString());
 
 		}
-	var next = 1;
+			var next = 1;
     $(".add-more").click(function(e){
         e.preventDefault();
         var addto = "#field" + next;
@@ -129,34 +129,37 @@ $(function() {
                 $(fieldID).remove();
             });
     });
-		$('#btn_sub').on("click", function() {
+
+		$('#contact-form').submit(function(e) {
 			var gender_val=$('input[name=gender]:checked').val()
 			var age_val=$('input[name=age]:checked').val()
 			var freq_val=$('input[name=freq]:checked').val()
+			var freq_fr_val=$('input[name=freq_fr]:checked').val()
 			var exp_val=$("#amount_expertise_SliderVal").text()
 			var conn_val=$("#amount_connectivity_SliderVal").text()
 			var mot_val=$("#amount_motivation_SliderVal").text()
-			var bonus_inf = new Array(); 
-			$("#field :input").each(function(e){	
-  					// show input value
-  					bonus_inf.push(this.value);
-}			);
+			var exp_fr_val=$("#amount_fr_expertise_SliderVal").text()
+			var mot_fr_val=$("#amount_fr_motivation_SliderVal").text()
+			
 			var obj = { 
 				user_acc:$('#twitter_own').val(),
 				gender: gender_val,
 				age: age_val,
 				location:  $('#country').val(), 
-				infl_acc_1: $('#inf1').val(),
-				infl_acc_2: $('#inf2').val(),
-				infl_acc_3: $('#inf3').val(),
-				bonus_inf:bonus_inf,
+				infl_acc: $('#twitter_infl').val(),
 				time: $('#timer').val(),
 				id: $('#validationCustomUsername').val(),
+				forum: $('#forum_name').val(),
 				exp: exp_val,
 				conn: conn_val,
 				freq: freq_val,
 				mot:mot_val ,
 				comment_first_sec: $('#comment_sec1').val(), 
+				follower_acc:  $('#workername').val(),
+				exp_fr: exp_fr_val,
+				freq_fr: freq_fr_val,
+				mot_fr:mot_fr_val,
+				comment_second_sec: $('#comment_sec2').val()
 			};
 
 			$.ajax( { 
@@ -205,10 +208,8 @@ $(function() {
 						<iframe src="https://giphy.com/embed/CT5Ye7uVJLFtu" width="1000" height="163" frameBorder="0" class="giphy-embed"\
 						align="midlle" allowFullScreen></iframe> <br> <center><h1>Please copy this code '+location_time_id+'</h1></center>';
 
-					
+
 					})
 
 	});
 });
-
-
