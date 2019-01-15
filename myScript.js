@@ -134,32 +134,30 @@ $(function() {
 			var gender_val=$('input[name=gender]:checked').val()
 			var age_val=$('input[name=age]:checked').val()
 			var freq_val=$('input[name=freq]:checked').val()
-			var freq_fr_val=$('input[name=freq_fr]:checked').val()
 			var exp_val=$("#amount_expertise_SliderVal").text()
 			var conn_val=$("#amount_connectivity_SliderVal").text()
 			var mot_val=$("#amount_motivation_SliderVal").text()
-			var exp_fr_val=$("#amount_fr_expertise_SliderVal").text()
-			var mot_fr_val=$("#amount_fr_motivation_SliderVal").text()
-			
+			var bonus_inf = new Array(); 
+			$("#field :input").each(function(e){	
+  					// show input value
+  					bonus_inf.push(this.value);
+  					});			
 			var obj = { 
 				user_acc:$('#twitter_own').val(),
 				gender: gender_val,
 				age: age_val,
 				location:  $('#country').val(), 
-				infl_acc: $('#twitter_infl').val(),
+				infl_acc_1: $('#inf1').val(),
+				infl_acc_2: $('#inf2').val(),
+				infl_acc_3: $('#inf3').val(),
+				bonus_inf:bonus_inf,
 				time: $('#timer').val(),
 				id: $('#validationCustomUsername').val(),
-				forum: $('#forum_name').val(),
 				exp: exp_val,
 				conn: conn_val,
 				freq: freq_val,
 				mot:mot_val ,
 				comment_first_sec: $('#comment_sec1').val(), 
-				follower_acc:  $('#workername').val(),
-				exp_fr: exp_fr_val,
-				freq_fr: freq_fr_val,
-				mot_fr:mot_fr_val,
-				comment_second_sec: $('#comment_sec2').val()
 			};
 
 			$.ajax( { 
