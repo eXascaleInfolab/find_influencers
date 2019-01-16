@@ -14,21 +14,21 @@ var counter_exp = 0
 var counter_conn = 0
 var counter_mot = 0
 $("#amount_expertise").slider();
-$("#amount_expertise").on("slide", function(slideEvt) {
-	$("#amount_expertise_SliderVal").text(slideEvt.value);
+$("#amount_expertise").on("change", function(slideEvt) {
+	$("#amount_expertise_SliderVal").text(slideEvt.value.newValue);
 	counter_exp = counter_exp + 1
 });
 
 
 $("#amount_connectivity").slider();
-$("#amount_connectivity").on("slide", function(slideEvt) {
-	$("#amount_connectivity_SliderVal").text(slideEvt.value);
+$("#amount_connectivity").on("change", function(slideEvt) {
+	$("#amount_connectivity_SliderVal").text(slideEvt.value.newValue);
 	counter_conn=counter_conn+1
 });
 
 $("#amount_motivation").slider();
-$("#amount_motivation").on("slide", function(slideEvt) {
-	$("#amount_motivation_SliderVal").text(slideEvt.value);
+$("#amount_motivation").on("change", function(slideEvt) {
+	$("#amount_motivation_SliderVal").text(slideEvt.value.newValue);
 	counter_mot=counter_mot+1
 });
 
