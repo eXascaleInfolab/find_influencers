@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="dist/css/bootstrap-select-country.min.css" />
-  <link rel="stylesheet" href="dist/css/bootstrap-slider.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.0/css/bootstrap-slider.min.css" />
   <link rel="stylesheet" href="dist/css/bootstrap.css" >
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="dist/css/main.css">
@@ -205,24 +205,12 @@
         <br>
           <div class="form-row">
             <div class="col-8">
-              <h4>How much do your friends consider you knowledgeable about fashion?*</h4>
+              <h4>How much do you know about fashion trends?*</h4>
             </div>
             <div class="col">
               <input id="amount_expertise" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50" required>
               &nbsp;
               <span id="amount_expertise_CurrentSliderValLabel">  <span id="amount_expertise_SliderVal">50</span> %</span>
-            </div>
-          </div>
-          <br>
-          <div class="form-row">
-            <div class="col-8">
-              <h4>From not interesting to very interesting, how much do you find useful to follow fashion influencers to know about fashion trends?*</h4>
-            </div>
-            <div class="col">
-              <br>
-              <input id="amount_connectivity" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
-              &nbsp;
-              <span id="amount_connectivity_CurrentSliderValLabel">  <span id="amount_connectivity_SliderVal">50</span> %</span>
             </div>
           </div>
           <br>
@@ -254,6 +242,25 @@
            </div>
          </p>
          <br>
+          <div class="form-row">
+            <div class="col-8">
+              <h4>Can you add a percentage?*</h4>
+            </div>
+            <div class="col" >
+              <br>
+              <input id="amount_connectivity" type="text" 
+              data-provide="slider"
+              data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"
+              data-slider-ticks="[0, 25, 75, 100]"
+              data-slider-ticks-labels='["Never", "Rarely", "Sometimes","Always"]'
+              data-slider-ticks-positions="[0, 30, 65, 100]"
+              ticks_positions="[0, 25,75, 100]"
+              style="right: 0%; width: 80%;"/>
+              &nbsp;
+              <span id="amount_connectivity_CurrentSliderValLabel">  <span id="amount_connectivity_SliderVal">50</span> %</span>
+            </div>
+          </div>
+          <br>         
          <div class="form-row">
           <div class="col-8">
             <h4>How much do you think other users would like this survey?*</h4>
@@ -313,7 +320,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="dist/js/bootstrap-select-country.min.js"></script>
-    <script src="dist/js/bootstrap-slider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.0/bootstrap-slider.min.js"></script>
     <script src="myScript.js"></script>
     <script id="empty-template" type="text/x-handlebars-template">
       <div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>

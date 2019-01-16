@@ -19,6 +19,7 @@ $("#amount_expertise").on("slide", function(slideEvt) {
 	counter_exp = counter_exp + 1
 });
 
+
 $("#amount_connectivity").slider();
 $("#amount_connectivity").on("slide", function(slideEvt) {
 	$("#amount_connectivity_SliderVal").text(slideEvt.value);
@@ -41,7 +42,7 @@ $(function() {
 	var btn_valid1 = $('#btn_valid1')
 	var btn_sub=$('#btn_sub')
 	button_twitter.on("click", function(e) {
-
+		$("#amount_connectivity").slider('refresh');
 		var twitter_own = $('#twitter_own').val()
 		var c = twitter_own.startsWith("@");
 
