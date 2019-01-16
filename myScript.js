@@ -158,6 +158,7 @@ $(function() {
 				freq: freq_val,
 				mot:mot_val ,
 				comment_first_sec: $('#comment_sec1').val(), 
+				comment_knowl: $('#comment_knowl').val(), 
 			};
 
 			$.ajax( { 
