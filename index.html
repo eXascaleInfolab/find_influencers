@@ -205,10 +205,17 @@
         <br>
           <div class="form-row">
             <div class="col-8">
-              <h4>How much do you know about fashion trends?*</h4>
+              <h4>How is your knowledge about fashion trends?*</h4>
             </div>
             <div class="col">
-              <input id="amount_expertise" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50" required>
+              <input id="amount_expertise" type="text" 
+              data-provide="slider"
+              data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"
+              data-slider-ticks="[0, 25,50, 80, 100]"
+              data-slider-ticks-labels='["Poor", "Fair","Average","Good","Excellent"]'
+              data-slider-ticks-positions="[0, 25,50, 80, 100]"
+              ticks_positions="[0, 25,50, 80, 100]"
+              style="right: 0%; width: 80%;"/>
               &nbsp;
               <span id="amount_expertise_CurrentSliderValLabel">  <span id="amount_expertise_SliderVal">50</span> %</span>
             </div>
@@ -270,7 +277,14 @@
             <h4>How much do you think other users would like this survey?*</h4>
           </div>
           <div class="col">
-            <input id="amount_motivation" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
+            <input id="amount_motivation" type="text"
+              data-provide="slider"
+              data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"
+              data-slider-ticks="[0, 50, 100]"
+              data-slider-ticks-labels='["Not at all", "Moderately","Extremely"]'
+              data-slider-ticks-positions="[0, 50, 100]"
+              ticks_positions="[0, 50, 100]"
+              style="right: 0%; width: 80%;"/>
             &nbsp;
             <span id="amount_motivation_CurrentSliderValLabel">  <span id="amount_motivation_SliderVal">50</span> %</span>
           </div>
